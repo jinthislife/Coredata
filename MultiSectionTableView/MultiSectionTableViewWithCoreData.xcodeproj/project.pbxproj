@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F13D16F1250C72AC00BA1C69 /* CollectionViewWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13D16F1250C72AC00BA1C69 /* MultiSectionTableViewWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiSectionTableViewWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13D16F4250C72AC00BA1C69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F13D16F6250C72AC00BA1C69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F13D16F8250C72AC00BA1C69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		F13D1700250C72AC00BA1C69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13D1703250C72AC00BA1C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13D1705250C72AC00BA1C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F13D170A250C72AC00BA1C69 /* CollectionViewWithCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewWithCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F13D170A250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiSectionTableViewWithCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13D170E250C72AC00BA1C69 /* CollectionViewWithCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewWithCoreDataTests.swift; sourceTree = "<group>"; };
 		F13D1710250C72AC00BA1C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				F13D16F3250C72AC00BA1C69 /* CollectionViewWithCoreData */,
-				F13D170D250C72AC00BA1C69 /* CollectionViewWithCoreDataTests */,
+				F13D170D250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests */,
 				F13D16F2250C72AC00BA1C69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,8 +72,8 @@
 		F13D16F2250C72AC00BA1C69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F13D16F1250C72AC00BA1C69 /* CollectionViewWithCoreData.app */,
-				F13D170A250C72AC00BA1C69 /* CollectionViewWithCoreDataTests.xctest */,
+				F13D16F1250C72AC00BA1C69 /* MultiSectionTableViewWithCoreData.app */,
+				F13D170A250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,21 +93,21 @@
 			path = CollectionViewWithCoreData;
 			sourceTree = "<group>";
 		};
-		F13D170D250C72AC00BA1C69 /* CollectionViewWithCoreDataTests */ = {
+		F13D170D250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests */ = {
 			isa = PBXGroup;
 			children = (
 				F13D170E250C72AC00BA1C69 /* CollectionViewWithCoreDataTests.swift */,
 				F13D1710250C72AC00BA1C69 /* Info.plist */,
 			);
-			path = CollectionViewWithCoreDataTests;
+			path = MultiSectionTableViewWithCoreDataTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F13D16F0250C72AC00BA1C69 /* CollectionViewWithCoreData */ = {
+		F13D16F0250C72AC00BA1C69 /* MultiSectionTableViewWithCoreData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F13D1713250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "CollectionViewWithCoreData" */;
+			buildConfigurationList = F13D1713250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "MultiSectionTableViewWithCoreData" */;
 			buildPhases = (
 				F13D16ED250C72AC00BA1C69 /* Sources */,
 				F13D16EE250C72AC00BA1C69 /* Frameworks */,
@@ -117,14 +117,14 @@
 			);
 			dependencies = (
 			);
-			name = CollectionViewWithCoreData;
+			name = MultiSectionTableViewWithCoreData;
 			productName = CollectionViewWithCoreData;
-			productReference = F13D16F1250C72AC00BA1C69 /* CollectionViewWithCoreData.app */;
+			productReference = F13D16F1250C72AC00BA1C69 /* MultiSectionTableViewWithCoreData.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F13D1709250C72AC00BA1C69 /* CollectionViewWithCoreDataTests */ = {
+		F13D1709250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F13D1716250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "CollectionViewWithCoreDataTests" */;
+			buildConfigurationList = F13D1716250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "MultiSectionTableViewWithCoreDataTests" */;
 			buildPhases = (
 				F13D1706250C72AC00BA1C69 /* Sources */,
 				F13D1707250C72AC00BA1C69 /* Frameworks */,
@@ -135,9 +135,9 @@
 			dependencies = (
 				F13D170C250C72AC00BA1C69 /* PBXTargetDependency */,
 			);
-			name = CollectionViewWithCoreDataTests;
+			name = MultiSectionTableViewWithCoreDataTests;
 			productName = CollectionViewWithCoreDataTests;
-			productReference = F13D170A250C72AC00BA1C69 /* CollectionViewWithCoreDataTests.xctest */;
+			productReference = F13D170A250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +159,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F13D16EC250C72AC00BA1C69 /* Build configuration list for PBXProject "CollectionViewWithCoreData" */;
+			buildConfigurationList = F13D16EC250C72AC00BA1C69 /* Build configuration list for PBXProject "MultiSectionTableViewWithCoreData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,8 +172,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F13D16F0250C72AC00BA1C69 /* CollectionViewWithCoreData */,
-				F13D1709250C72AC00BA1C69 /* CollectionViewWithCoreDataTests */,
+				F13D16F0250C72AC00BA1C69 /* MultiSectionTableViewWithCoreData */,
+				F13D1709250C72AC00BA1C69 /* MultiSectionTableViewWithCoreDataTests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,7 +223,7 @@
 /* Begin PBXTargetDependency section */
 		F13D170C250C72AC00BA1C69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F13D16F0250C72AC00BA1C69 /* CollectionViewWithCoreData */;
+			target = F13D16F0250C72AC00BA1C69 /* MultiSectionTableViewWithCoreData */;
 			targetProxy = F13D170B250C72AC00BA1C69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -416,7 +416,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewWithCoreData.app/CollectionViewWithCoreData";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiSectionTableViewWithCoreData.app/MultiSectionTableViewWithCoreData";
 			};
 			name = Debug;
 		};
@@ -438,14 +438,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewWithCoreData.app/CollectionViewWithCoreData";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MultiSectionTableViewWithCoreData.app/MultiSectionTableViewWithCoreData";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F13D16EC250C72AC00BA1C69 /* Build configuration list for PBXProject "CollectionViewWithCoreData" */ = {
+		F13D16EC250C72AC00BA1C69 /* Build configuration list for PBXProject "MultiSectionTableViewWithCoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F13D1711250C72AC00BA1C69 /* Debug */,
@@ -454,7 +454,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F13D1713250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "CollectionViewWithCoreData" */ = {
+		F13D1713250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "MultiSectionTableViewWithCoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F13D1714250C72AC00BA1C69 /* Debug */,
@@ -463,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F13D1716250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "CollectionViewWithCoreDataTests" */ = {
+		F13D1716250C72AC00BA1C69 /* Build configuration list for PBXNativeTarget "MultiSectionTableViewWithCoreDataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F13D1717250C72AC00BA1C69 /* Debug */,
