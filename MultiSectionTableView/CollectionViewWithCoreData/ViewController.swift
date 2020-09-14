@@ -22,17 +22,15 @@ class ViewController: UIViewController {
     }
     
     private lazy var fetchedResultsController: NSFetchedResultsController<Bookmark> = {
-        
         let fetchRequest: NSFetchRequest<Bookmark> = Bookmark.fetchRequest()
         //        fetchRequest.predicate = predicate ...
-        //        let sortDescriptor1 = NSSortDescriptor(key: "category", ascending: true)
+        let sortDescriptor1 = NSSortDescriptor(key: "category", ascending: true)
         let sortDescriptor2 = NSSortDescriptor(key: "mainText", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor2]
+        fetchRequest.sortDescriptors = [sortDescriptor1, sortDescriptor2]
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext, sectionNameKeyPath: "category", cacheName: nil)
         frc.delegate = self
         return frc
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +54,10 @@ class ViewController: UIViewController {
             [unowned self] action in
             
             guard let textField = alert.textFields?.first,
-                let newCategory = textField.text else {
+                let newCategory = textField.text, let itemInfo = alert.textFields?.last?.text else {
                     return
             }
-            let itemInfo = alert.textFields?.last?.text
+            
             
             self.save(category: newCategory, itemInfo: itemInfo)
             //            self.tableView.reloadData()
@@ -80,7 +78,7 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    func save(category: String, itemInfo: String?) {
+    func save(category: String, itemInfo: String) {
         
         let entity = NSEntityDescription.entity(forEntityName: "Bookmark",
                                                 in: managedContext)!
@@ -88,7 +86,7 @@ class ViewController: UIViewController {
                                        insertInto: managedContext)
         
         bookmark.setValue(category, forKeyPath: "category")
-        bookmark.setValue(itemInfo ?? "Unknown", forKey: "mainText")
+        bookmark.setValue(itemInfo, forKey: "mainText")
         
         appDelegate.saveContext()
     }
