@@ -68,52 +68,37 @@ class FolderViewController: UIViewController {
             print(error)
         }
     }
-    
-    func save(folderName: String) {
+
+    func save(name: String, isFile: Bool) {
         
         let entity = NSEntityDescription.entity(forEntityName: "Folder", in: managedContext)!
         let folder = NSManagedObject(entity: entity, insertInto: managedContext)
         
-        folder.setValue(folderName, forKeyPath: "name")
-        folder.setValue(false, forKeyPath: "isFile")
-        folder.setValue(parentFolder, forKey: "parent")
-        
-        appDelegate.saveContext()
-    }
-    
-    func save(fileName: String) {
-        
-        let entity = NSEntityDescription.entity(forEntityName: "Folder", in: managedContext)!
-        let folder = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        folder.setValue(fileName, forKeyPath: "name")
-        folder.setValue(true, forKeyPath: "isFile")
+        folder.setValue(name, forKeyPath: "name")
+        folder.setValue(isFile, forKeyPath: "isFile")
         folder.setValue(parentFolder, forKey: "parent")
         
         appDelegate.saveContext()
     }
 
-    @objc func addFolder() {
-        let alert = UIAlertController(title: "New Folder",
-                                      message: "Add folder name",
+    func showEidtAlert(for item: String) {
+        let alert = UIAlertController(title: "New \(item)",
+                                      message: "Add \(item) name",
                                       preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .default) {
             [unowned self] action in
-            
             guard let textField = alert.textFields?.first,
-                let folderName = textField.text else {
+                let name = textField.text else {
                     return
             }
-            
-            self.save(folderName: folderName)
-            //            self.tableView.reloadData()
+            self.save(name: name, isFile: (item == "File"))
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
         alert.addTextField { textfield in
-            textfield.placeholder = "Folder name"
+            textfield.placeholder = "\(item) name"
         }
         
         alert.addAction(saveAction)
@@ -122,32 +107,12 @@ class FolderViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    @objc func addFolder() {
+        showEidtAlert(for: "Folder")
+    }
+    
     @objc func addFile() {
-        let alert = UIAlertController(title: "New File",
-                                      message: "Add file name",
-                                      preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Save", style: .default) {
-            [unowned self] action in
-            
-            guard let textField = alert.textFields?.first,
-                let fileName = textField.text else {
-                    return
-            }
-            
-            self.save(fileName: fileName)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        alert.addTextField { textfield in
-            textfield.placeholder = "File name"
-        }
-        
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        present(alert, animated: true)
+        showEidtAlert(for: "File")
     }
 
 }
@@ -192,7 +157,8 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
             managedContext.delete(bookmark)
             appDelegate.saveContext()
         }
-    }}
+    }
+}
 
 extension FolderViewController: NSFetchedResultsControllerDelegate {
     
