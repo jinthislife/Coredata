@@ -87,7 +87,7 @@ class FolderViewController: UIViewController {
             print("object is empty")
             return
         }
-        let objectCopy = object.copyEntireObjectGraph(context: managedContext)
+        let objectCopy = object.copyEntireObjectGraph(context: managedContext, excluding: parentFolder)
         
         objectCopy.setValue(parentFolder, forKey: "parent")
         
@@ -143,6 +143,7 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Could not dequeue UITableViewCell")
         }
         
+        cell.imageView?.image = nil // reset for reuse
         if folder.isFile == false {
             cell.imageView?.image = UIImage(systemName: "folder.fill")
         }
