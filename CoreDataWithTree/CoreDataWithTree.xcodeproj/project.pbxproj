@@ -16,6 +16,7 @@
 		F14BD37825216B540009C2C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14BD37625216B540009C2C9 /* LaunchScreen.storyboard */; };
 		F14BD38325216B540009C2C9 /* CoreDataWithTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BD38225216B540009C2C9 /* CoreDataWithTreeTests.swift */; };
 		F14BD38E25216B540009C2C9 /* CoreDataWithTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14BD38D25216B540009C2C9 /* CoreDataWithTreeUITests.swift */; };
+		F1E0A9BE2522F9BD0061E8E7 /* NSManagedObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E0A9BD2522F9BD0061E8E7 /* NSManagedObject+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F14BD38925216B540009C2C9 /* CoreDataWithTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataWithTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14BD38D25216B540009C2C9 /* CoreDataWithTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWithTreeUITests.swift; sourceTree = "<group>"; };
 		F14BD38F25216B540009C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E0A9BD2522F9BD0061E8E7 /* NSManagedObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				F14BD36825216B540009C2C9 /* AppDelegate.swift */,
 				F14BD36A25216B540009C2C9 /* SceneDelegate.swift */,
 				F14BD36C25216B540009C2C9 /* FolderViewController.swift */,
+				F1E0A9BD2522F9BD0061E8E7 /* NSManagedObject+Extension.swift */,
 				F14BD37425216B540009C2C9 /* Assets.xcassets */,
 				F14BD36E25216B540009C2C9 /* Main.storyboard */,
 				F14BD37625216B540009C2C9 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			files = (
 				F14BD37325216B540009C2C9 /* CoreDataWithTree.xcdatamodeld in Sources */,
 				F14BD36D25216B540009C2C9 /* FolderViewController.swift in Sources */,
+				F1E0A9BE2522F9BD0061E8E7 /* NSManagedObject+Extension.swift in Sources */,
 				F14BD36925216B540009C2C9 /* AppDelegate.swift in Sources */,
 				F14BD36B25216B540009C2C9 /* SceneDelegate.swift in Sources */,
 			);

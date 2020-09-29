@@ -11,11 +11,11 @@ import CoreData
 class FolderViewController: UIViewController {
     
     var parentFolder: Folder?
-
+    
     var appDelegate: AppDelegate {
         UIApplication.shared.delegate as! AppDelegate
     }
-
+    
     var managedContext: NSManagedObjectContext {
         appDelegate.persistentContainer.viewContext
     }
@@ -55,12 +55,13 @@ class FolderViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-
+        
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "folder.fill"), style: .plain, target: self, action: #selector(addFolder)),
             UIBarButtonItem(image: UIImage(systemName: "doc.fill"), style: .plain, target: self, action: #selector(addFile))
         ]
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+        
         do {
             try frc.performFetch()
             tableView.reloadData()
@@ -68,7 +69,7 @@ class FolderViewController: UIViewController {
             print(error)
         }
     }
-
+    
     func save(name: String, isFile: Bool) {
         
         let entity = NSEntityDescription.entity(forEntityName: "Folder", in: managedContext)!
@@ -80,7 +81,19 @@ class FolderViewController: UIViewController {
         
         appDelegate.saveContext()
     }
-
+    
+    func copyAndPaste(object: NSManagedObject?) {
+        guard let object = object else {
+            print("object is empty")
+            return
+        }
+        let objectCopy = object.copyEntireObjectGraph(context: managedContext)
+        
+        objectCopy.setValue(parentFolder, forKey: "parent")
+        
+        appDelegate.saveContext()
+    }
+    
     func showEidtAlert(for item: String) {
         let alert = UIAlertController(title: "New \(item)",
                                       message: "Add \(item) name",
@@ -89,8 +102,8 @@ class FolderViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default) {
             [unowned self] action in
             guard let textField = alert.textFields?.first,
-                let name = textField.text else {
-                    return
+                  let name = textField.text else {
+                return
             }
             self.save(name: name, isFile: (item == "File"))
         }
@@ -114,7 +127,7 @@ class FolderViewController: UIViewController {
     @objc func addFile() {
         showEidtAlert(for: "File")
     }
-
+    
 }
 
 extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
@@ -144,13 +157,13 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
         guard !folder.isFile else {
             return
         }
-
+        
         let vc = FolderViewController()
         vc.parentFolder = folder
         
         navigationController?.pushViewController(vc, animated: true)
     }
-
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let bookmark = frc.object(at: indexPath)
@@ -158,6 +171,33 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
             appDelegate.saveContext()
         }
     }
+    
+    func tableView(_ tableView: UITableView,
+                            contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint)
+    -> UIContextMenuConfiguration? {
+        
+        let copiedObject = frc.object(at: indexPath)
+        let identifier = "\(indexPath.row)" as NSString
+    
+        return UIContextMenuConfiguration(identifier: identifier, previewProvider: nil) { _ in
+            let copyAction = UIAction(title: "Copy", image: UIImage(systemName: "doc.on.doc")) { [weak self] action in
+                self?.copyAndPaste(object: copiedObject)
+            }
+            return UIMenu(title: "", image: nil, children: [copyAction])
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+      guard let identifier = configuration.identifier as? String,
+        let index = Int(identifier),
+        let cell = tableView.cellForRow(at: IndexPath(row: index, section: 0))
+        else {
+          return nil
+      }
+      
+      return UITargetedPreview(view: cell)
+    }
+
 }
 
 extension FolderViewController: NSFetchedResultsControllerDelegate {
