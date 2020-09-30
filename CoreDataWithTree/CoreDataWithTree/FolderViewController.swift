@@ -37,7 +37,7 @@ class FolderViewController: UIViewController {
             fetchRequest.predicate = NSPredicate(format: "parent == nil")
         }
         let sd1 = NSSortDescriptor(key: "isFile", ascending: true)
-        let sd2 = NSSortDescriptor(key: "timeStamp", ascending: false)
+        let sd2 = NSSortDescriptor(key: "name", ascending: false)
         fetchRequest.sortDescriptors = [sd1, sd2]
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext, sectionNameKeyPath: nil, cacheName: nil)
         frc.delegate = self
