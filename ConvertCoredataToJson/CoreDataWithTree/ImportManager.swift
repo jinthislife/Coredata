@@ -15,7 +15,7 @@ class ImportManager{
     }
 
     func importData(completion:@escaping () -> ()){
-
+    
 //        guard let url = Bundle.main.url(forResource: "folders", withExtension: "json") else { fatalError("no file") }
         do{
             let documentDirectoryURL =  try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -28,17 +28,11 @@ class ImportManager{
             do{
                 let folders = try decoder.decode([Folder].self, from: json)
 
-                for folder in folders where folder.parentid != 0{
-                    guard let parentid = folder.parentid else { fatalError("Can not get parentid") }
-                    guard let parent = (folders.filter { $0.myid == parentid }.first) else { fatalError("Can not get parent") }
-                    folder.parent = parent
-                }
-                
                 do {
                     try managedObjectContext.save()
                         completion()
                 } catch {
-                    print("Export Error 1")
+                    print("Export Error 1\n\(error)")
                        completion()
                 }
             }catch{
@@ -46,7 +40,7 @@ class ImportManager{
                 completion()
             }
         } catch {
-            print("Export Error 3")
+            print("Export Error 3\n\(error)")
             completion()
         }
     }
