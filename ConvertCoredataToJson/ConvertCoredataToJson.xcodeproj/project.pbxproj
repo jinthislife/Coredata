@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F14BD36525216B540009C2C9 /* CoreDataWithTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataWithTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14BD36525216B540009C2C9 /* ConvertCoredataToJson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertCoredataToJson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14BD36825216B540009C2C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14BD36A25216B540009C2C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F14BD36C25216B540009C2C9 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
@@ -49,10 +49,10 @@
 		F14BD37425216B540009C2C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F14BD37725216B540009C2C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F14BD37925216B540009C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F14BD37E25216B540009C2C9 /* CoreDataWithTreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataWithTreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14BD37E25216B540009C2C9 /* ConvertCoredataToJsonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertCoredataToJsonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14BD38225216B540009C2C9 /* CoreDataWithTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWithTreeTests.swift; sourceTree = "<group>"; };
 		F14BD38425216B540009C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F14BD38925216B540009C2C9 /* CoreDataWithTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataWithTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14BD38925216B540009C2C9 /* ConvertCoredataToJsonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConvertCoredataToJsonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14BD38D25216B540009C2C9 /* CoreDataWithTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataWithTreeUITests.swift; sourceTree = "<group>"; };
 		F14BD38F25216B540009C2C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F14EAC4E252427A7004C8E04 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 		F14BD36625216B540009C2C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F14BD36525216B540009C2C9 /* CoreDataWithTree.app */,
-				F14BD37E25216B540009C2C9 /* CoreDataWithTreeTests.xctest */,
-				F14BD38925216B540009C2C9 /* CoreDataWithTreeUITests.xctest */,
+				F14BD36525216B540009C2C9 /* ConvertCoredataToJson.app */,
+				F14BD37E25216B540009C2C9 /* ConvertCoredataToJsonTests.xctest */,
+				F14BD38925216B540009C2C9 /* ConvertCoredataToJsonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F14BD36425216B540009C2C9 /* CoreDataWithTree */ = {
+		F14BD36425216B540009C2C9 /* ConvertCoredataToJson */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F14BD39225216B540009C2C9 /* Build configuration list for PBXNativeTarget "CoreDataWithTree" */;
+			buildConfigurationList = F14BD39225216B540009C2C9 /* Build configuration list for PBXNativeTarget "ConvertCoredataToJson" */;
 			buildPhases = (
 				F14BD36125216B540009C2C9 /* Sources */,
 				F14BD36225216B540009C2C9 /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = CoreDataWithTree;
+			name = ConvertCoredataToJson;
 			productName = CoreDataWithTree;
-			productReference = F14BD36525216B540009C2C9 /* CoreDataWithTree.app */;
+			productReference = F14BD36525216B540009C2C9 /* ConvertCoredataToJson.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F14BD37D25216B540009C2C9 /* CoreDataWithTreeTests */ = {
+		F14BD37D25216B540009C2C9 /* ConvertCoredataToJsonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F14BD39525216B540009C2C9 /* Build configuration list for PBXNativeTarget "CoreDataWithTreeTests" */;
+			buildConfigurationList = F14BD39525216B540009C2C9 /* Build configuration list for PBXNativeTarget "ConvertCoredataToJsonTests" */;
 			buildPhases = (
 				F14BD37A25216B540009C2C9 /* Sources */,
 				F14BD37B25216B540009C2C9 /* Frameworks */,
@@ -176,14 +176,14 @@
 			dependencies = (
 				F14BD38025216B540009C2C9 /* PBXTargetDependency */,
 			);
-			name = CoreDataWithTreeTests;
+			name = ConvertCoredataToJsonTests;
 			productName = CoreDataWithTreeTests;
-			productReference = F14BD37E25216B540009C2C9 /* CoreDataWithTreeTests.xctest */;
+			productReference = F14BD37E25216B540009C2C9 /* ConvertCoredataToJsonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F14BD38825216B540009C2C9 /* CoreDataWithTreeUITests */ = {
+		F14BD38825216B540009C2C9 /* ConvertCoredataToJsonUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F14BD39825216B540009C2C9 /* Build configuration list for PBXNativeTarget "CoreDataWithTreeUITests" */;
+			buildConfigurationList = F14BD39825216B540009C2C9 /* Build configuration list for PBXNativeTarget "ConvertCoredataToJsonUITests" */;
 			buildPhases = (
 				F14BD38525216B540009C2C9 /* Sources */,
 				F14BD38625216B540009C2C9 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				F14BD38B25216B540009C2C9 /* PBXTargetDependency */,
 			);
-			name = CoreDataWithTreeUITests;
+			name = ConvertCoredataToJsonUITests;
 			productName = CoreDataWithTreeUITests;
-			productReference = F14BD38925216B540009C2C9 /* CoreDataWithTreeUITests.xctest */;
+			productReference = F14BD38925216B540009C2C9 /* ConvertCoredataToJsonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F14BD36025216B540009C2C9 /* Build configuration list for PBXProject "CoreDataWithTree" */;
+			buildConfigurationList = F14BD36025216B540009C2C9 /* Build configuration list for PBXProject "ConvertCoredataToJson" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F14BD36425216B540009C2C9 /* CoreDataWithTree */,
-				F14BD37D25216B540009C2C9 /* CoreDataWithTreeTests */,
-				F14BD38825216B540009C2C9 /* CoreDataWithTreeUITests */,
+				F14BD36425216B540009C2C9 /* ConvertCoredataToJson */,
+				F14BD37D25216B540009C2C9 /* ConvertCoredataToJsonTests */,
+				F14BD38825216B540009C2C9 /* ConvertCoredataToJsonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -305,12 +305,12 @@
 /* Begin PBXTargetDependency section */
 		F14BD38025216B540009C2C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F14BD36425216B540009C2C9 /* CoreDataWithTree */;
+			target = F14BD36425216B540009C2C9 /* ConvertCoredataToJson */;
 			targetProxy = F14BD37F25216B540009C2C9 /* PBXContainerItemProxy */;
 		};
 		F14BD38B25216B540009C2C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F14BD36425216B540009C2C9 /* CoreDataWithTree */;
+			target = F14BD36425216B540009C2C9 /* ConvertCoredataToJson */;
 			targetProxy = F14BD38A25216B540009C2C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -506,7 +506,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataWithTree.app/CoreDataWithTree";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvertCoredataToJson.app/ConvertCoredataToJson";
 			};
 			name = Debug;
 		};
@@ -527,7 +527,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataWithTree.app/CoreDataWithTree";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConvertCoredataToJson.app/ConvertCoredataToJson";
 			};
 			name = Release;
 		};
@@ -572,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F14BD36025216B540009C2C9 /* Build configuration list for PBXProject "CoreDataWithTree" */ = {
+		F14BD36025216B540009C2C9 /* Build configuration list for PBXProject "ConvertCoredataToJson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F14BD39025216B540009C2C9 /* Debug */,
@@ -581,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F14BD39225216B540009C2C9 /* Build configuration list for PBXNativeTarget "CoreDataWithTree" */ = {
+		F14BD39225216B540009C2C9 /* Build configuration list for PBXNativeTarget "ConvertCoredataToJson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F14BD39325216B540009C2C9 /* Debug */,
@@ -590,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F14BD39525216B540009C2C9 /* Build configuration list for PBXNativeTarget "CoreDataWithTreeTests" */ = {
+		F14BD39525216B540009C2C9 /* Build configuration list for PBXNativeTarget "ConvertCoredataToJsonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F14BD39625216B540009C2C9 /* Debug */,
@@ -599,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F14BD39825216B540009C2C9 /* Build configuration list for PBXNativeTarget "CoreDataWithTreeUITests" */ = {
+		F14BD39825216B540009C2C9 /* Build configuration list for PBXNativeTarget "ConvertCoredataToJsonUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F14BD39925216B540009C2C9 /* Debug */,

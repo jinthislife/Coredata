@@ -10,6 +10,8 @@ import CoreData
 
 class FolderViewController: UIViewController {
     
+    private var exportManager: ExportManager!
+    private var importManager: ImportManager!
     var parentFolder: Folder?
     
     var appDelegate: AppDelegate {
@@ -48,6 +50,11 @@ class FolderViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(tableView)
         
+        importManager = ImportManager(managedObjectContext: managedContext)
+        exportManager = ExportManager(managedObjectContext: managedContext)
+        exportManager.exportHandler = {
+            print("Finish export data")
+        }
         title = parentFolder?.name ?? "Root"
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -68,6 +75,8 @@ class FolderViewController: UIViewController {
         } catch {
             print(error)
         }
+        
+        
     }
     
     func save(name: String, isFile: Bool) {
@@ -125,9 +134,24 @@ class FolderViewController: UIViewController {
     }
     
     @objc func addFile() {
-        showEidtAlert(for: "File")
+//        showEidtAlert(for: "File")
+//        exportManager.exportData()
+        importData()
     }
     
+    func importData() {
+        print("import data ... ")
+            importManager.importData(){ [weak self] in
+                guard let strongSelf = self else { return }
+                do {
+                    try strongSelf.frc.performFetch()
+                    strongSelf.tableView.reloadData()
+                } catch {
+                    let nserror = error as NSError
+                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                }
+            }
+        }
 }
 
 extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
@@ -155,7 +179,7 @@ extension FolderViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let folder = frc.object(at: indexPath)
         
-        guard !folder.isFile else {
+        guard let isFile = folder.isFile, !isFile else {
             return
         }
         
